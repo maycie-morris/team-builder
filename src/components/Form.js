@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 const Form = props => {
     const [member, setMember] = useState({
-        Name: '',
-        Email: '',
-        Role: ''
+        name: '',
+        email: '',
+        role: ''
     })
 
     console.log(member)
@@ -18,7 +18,7 @@ const Form = props => {
     const submitForm = event => {
         event.preventDefault();
         props.addTeamMember(member);
-        setMember({Name: '', Email: '', Role: ''})
+        setMember({name: '', email: '', role: ''})
     }
 
     return (
@@ -29,7 +29,7 @@ const Form = props => {
             <input
                 id="name"
                 type="text"
-                name="Name"
+                name="name"
                 placeholder={"Please Enter Your Name"}
                 value={ member.name }
                 onChange={changeHandler}
@@ -40,7 +40,7 @@ const Form = props => {
             <input 
                 id="email"
                 type="email"
-                name="Email"
+                name="email"
                 placeholder={"Please Enter Your Email Address"}
                 value= {member.email}
                 onChange={changeHandler}
@@ -51,7 +51,7 @@ const Form = props => {
             <input 
                 id="role"
                 type="text"
-                name="Role"
+                name="role"
                 placeholder="Please Enter Your Role"
                 value= {member.role}
                 onChange={changeHandler}
