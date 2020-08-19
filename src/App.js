@@ -4,7 +4,7 @@ import './App.css';
 // Import Components
 
 import Form from "./components/Form"
-import Team from "./components/TeamForm"
+import Team from "./components/Team"
 
 function App() {
 
@@ -31,7 +31,7 @@ const addTeamMember = member => {
     <div className="App">
       <h1>Team Members</h1>
       <Form addTeamMember={addTeamMember} />
-      <Team teamMember={teamMember} />
+       <Team teamMember={teamMember} />
     </div>
   );
 }
